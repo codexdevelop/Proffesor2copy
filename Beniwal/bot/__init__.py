@@ -9,7 +9,7 @@ from typing import Union, Optional, AsyncGenerator
 from aiohttp import web
 
 
-class TechVJXBot(Client):
+class BeniwalXBot(Client):
 
     def __init__(self):
         super().__init__(
@@ -64,7 +64,7 @@ class TechVJXBot(Client):
                 yield message
                 current += 1
       
-TechVJBot = TechVJXBot()
+BeniwalBot = BeniwalXBot()
 
 multi_clients = {}
 work_loads = {}
