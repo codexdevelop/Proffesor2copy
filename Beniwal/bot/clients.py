@@ -7,11 +7,11 @@ import logging
 from info import *
 from pyrogram import Client
 from Beniwal.util.config_parser import TokenParser
-from Beniwal.bot import multi_clients, work_loads, TechVJBot
+from Beniwal.bot import multi_clients, work_loads, BeniwalBot
 
 
 async def initialize_clients():
-    multi_clients[0] = TechVJBot
+    multi_clients[0] = BeniwalBot
     work_loads[0] = 0
     all_tokens = TokenParser().parse_from_env()
     if not all_tokens:
