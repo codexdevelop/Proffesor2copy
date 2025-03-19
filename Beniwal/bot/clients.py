@@ -1,13 +1,13 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit @Codexownerr
+# Join Update Channel For Amazing Bot @codexbotmaker
+# Ask Doubt on telegram @codexdisscus
 
 import asyncio
 import logging
 from info import *
 from pyrogram import Client
-from TechVJ.util.config_parser import TokenParser
-from TechVJ.bot import multi_clients, work_loads, TechVJBot
+from Beniwal.util.config_parser import TokenParser
+from Beniwal.bot import multi_clients, work_loads, TechVJBot
 
 
 async def initialize_clients():
