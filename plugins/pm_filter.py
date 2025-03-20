@@ -2812,13 +2812,13 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         vj_ai_msg = await reply_msg.edit_text("<b><i>I Am Trying To Find Your Movie With Your Wrong Spelling.</i></b>")
         movienamelist = []
         movienamelist += [movie.get('title') for movie in movies]
-        for techvj in movienamelist:
+        for beniwal in movienamelist:
             try:
                 mv_rqst = mv_rqst.capitalize()
             except:
                 pass
-            if mv_rqst.startswith(techvj[0]):
-                await auto_filter(client, techvj, msg, reply_msg, vj_search_new)
+            if mv_rqst.startswith(beniwal[0]):
+                await auto_filter(client, beniwal, msg, reply_msg, vj_search_new)
                 break
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
