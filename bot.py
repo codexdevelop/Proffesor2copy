@@ -24,7 +24,7 @@ from aiohttp import web
 from plugins import web_server
 from plugins.clone import restart_bots
 
-from Beniwal.bot import TechVJBot
+from Beniwal.bot import BeniwalBot
 from Beniwal.util.keepalive import ping_server
 from Beniwal.bot.clients import initialize_clients
 
@@ -49,7 +49,7 @@ async def start():
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
-            print("Tech VJ Imported => " + plugin_name)
+            print("Beniwal Imported => " + plugin_name)
     if ON_HEROKU:
         asyncio.create_task(ping_server())
     b_users, b_chats = await db.get_banned()
