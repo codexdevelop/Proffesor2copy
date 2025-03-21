@@ -184,7 +184,7 @@ Edit info.py with variables as given below then run bot
 
 ## Thanks to 
  - <b>Thanks To [Pyrogram Library](https://github.com/pyrogram/pyrogram) & [Pyrofork Library](https://github.com/Mayuri-Chan/pyrofork)
- - Thanks To [Tech VJ](https://t.me/codexbotmaker) To Modify And Add Amazing Feature In The Repo
+ - Thanks To [Codex Bot](https://t.me/codexbotmaker) To Modify And Add Amazing Feature In The Repo
  - Thanks To [Eva Marie](https://t.me/TeamEvamaria) For Base Repo
  - Thanks To All Everyone In This Journey</b>
 
