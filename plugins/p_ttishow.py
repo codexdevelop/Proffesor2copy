@@ -63,14 +63,13 @@ async def save_group(bot, message):
                 button = [[
                     InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                     InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ],[
+                ], [
                     InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
+                ], [
+                    InlineKeyboardButton("Instagram", url="https://instagram.com/your_instagram"),
+                    InlineKeyboardButton("YouTube", url="https://youtube.com/your_youtube"),
+                    InlineKeyboardButton("Website", url="https://yourwebsite.com")
                 ]]
-                temp.MELCOW['welcome'] = await message.reply_text(
-                    text=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
-                    reply_markup=InlineKeyboardMarkup(button),
-                    parse_mode=enums.ParseMode.HTML
-                )  
         if settings["auto_delete"]:
             await asyncio.sleep(600)
             await (temp.MELCOW['welcome']).delete()
