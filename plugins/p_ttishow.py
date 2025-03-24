@@ -62,14 +62,16 @@ async def save_group(bot, message):
                         pass
 
                 button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                    InlineKeyboardButton('💫Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                    InlineKeyboardButton('😇Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                 ], [
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
+                    InlineKeyboardButton("🍁Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
                 ], [
-                    InlineKeyboardButton("Instagram", url="https://instagram.com/your_instagram"),
-                    InlineKeyboardButton("YouTube", url="https://youtube.com/your_youtube"),
-                    InlineKeyboardButton("Website", url="https://yourwebsite.com")
+                    InlineKeyboardButton("👻Instagram", url="https://instagram.com/your_instagram")
+                ], [
+                    InlineKeyboardButton("💢YouTube", url="https://youtube.com/your_youtube")
+                ], [
+                    InlineKeyboardButton("👀Website", url="https://yourwebsite.com")
                 ]]
 
                 # Welcome Message को Store करना
