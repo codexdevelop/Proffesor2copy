@@ -28,18 +28,18 @@ async def cancel(bot, update):
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
     try:
+        # 🔍 Debugging Log: Callback Data Check
+        print(f"🔍 Received callback data: {update.data}")
+
         data_parts = update.data.split("_")
 
         # ✅ Fix: Ensure valid callback data before processing
         if len(data_parts) < 2:
-            await update.answer("Invalid callback data!", show_alert=True)
+            await update.answer(f"Invalid callback data: {update.data}", show_alert=True)
             return
         
         type = data_parts[1]  # Now it's safe
         new_name = update.message.text
-
-        # ✅ Extra Debugging Log (Optional)
-        print(f"Received callback data: {update.data}")
 
         new_filename = new_name.split(":-")[1]
         file = update.message.reply_to_message
