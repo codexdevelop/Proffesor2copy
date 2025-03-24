@@ -17,9 +17,9 @@ from database.connections_mdb import active_connection, mydb
 
 # Stickers की IDs (अपने stickers से replace करो)
 sticker_ids = [
-    "CAACAgUAAxkBAAEGzLRlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E",  # Sticker 1
-    "CAACAgUAAxkBAAEGzLVlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E",  # Sticker 2
-    "CAACAgUAAxkBAAEGzLdlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E"   # Sticker 3
+    "CAACAgIAAxkBAAEOJOln4O-1fG_q04xqoj_j873GKUONBQACpxkAAmvFaUj_NoCtShvusjYE",  # Sticker 1
+    "CAACAgIAAxkBAAEOJOln4O-1fG_q04xqoj_j873GKUONBQACpxkAAmvFaUj_NoCtShvusjYE",  # Sticker 2
+    "CAACAgIAAxkBAAEOJOln4O-1fG_q04xqoj_j873GKUONBQACpxkAAmvFaUj_NoCtShvusjYE"   # Sticker 3
 ]
 
 async def send_welcome_animation(message):
