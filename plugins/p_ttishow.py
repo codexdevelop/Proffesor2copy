@@ -15,23 +15,45 @@ from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInv
 from utils import get_settings, pub_is_subscribed, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial, get_seconds
 from database.connections_mdb import active_connection, mydb
 
+# Stickers की IDs (अपने stickers से replace करो)
+sticker_ids = [
+    "CAACAgUAAxkBAAEGzLRlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E",  # Sticker 1
+    "CAACAgUAAxkBAAEGzLVlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E",  # Sticker 2
+    "CAACAgUAAxkBAAEGzLdlKOmPvPr3XzJf4RFLvKp4yRX6KwACAAcAApbJgFQXrrOYv6Ijci8E"   # Sticker 3
+]
+
+async def send_welcome_animation(message):
+    """Welcome animation effect (stickers appearing & disappearing)"""
+    messages = []
+    
+    for sticker in sticker_ids:
+        msg = await message.reply_sticker(sticker=sticker)
+        messages.append(msg)
+        await asyncio.sleep(1.5)  # हर sticker के बीच 1.5 सेकंड का delay
+
+    # 5 सेकंड बाद सारे Stickers delete कर दो  
+    await asyncio.sleep(5)
+    for msg in messages:
+        await msg.delete()
+
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     r_j_check = [u.id for u in message.new_chat_members]
+    
     if temp.ME in r_j_check:
         if not await db.get_chat(message.chat.id):
-            total=await bot.get_chat_members_count(message.chat.id)
+            total = await bot.get_chat_members_count(message.chat.id)
             r_j = message.from_user.mention if message.from_user else "Anonymous" 
             await bot.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, r_j))       
             await db.add_chat(message.chat.id, message.chat.title)
+        
         if message.chat.id in temp.BANNED_CHATS:
-            # Inspired from a boat of a banana tree
             buttons = [[
                 InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
             ]]
-            reply_markup=InlineKeyboardMarkup(buttons)
+            reply_markup = InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
+                text="<b>CHAT NOT ALLOWED 🐞\n\nMy admins have restricted me from working here! If you want to know more, contact support.</b>",
                 reply_markup=reply_markup,
             )
             try:
@@ -40,27 +62,34 @@ async def save_group(bot, message):
                 pass
             await bot.leave_chat(message.chat.id)
             return
+        
         buttons = [[
             InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
             InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-        ],[
+        ], [
             InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
         ]]
-        reply_markup=InlineKeyboardMarkup(buttons)
+        reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"<b>Thank you for adding me to {message.chat.title} ❣️\n\nIf you have any questions, contact support.</b>",
             reply_markup=reply_markup
         )
+
     else:
         settings = await get_settings(message.chat.id)
+        
         if settings["welcome"]:
             for u in message.new_chat_members:
-                if (temp.MELCOW).get('welcome') is not None:
+                if temp.MELCOW.get('welcome') is not None:
                     try:
-                        await (temp.MELCOW['welcome']).delete()
+                        await temp.MELCOW['welcome'].delete()
                     except:
                         pass
 
+                # 🔥 पहले Welcome Animation चलाओ  
+                await send_welcome_animation(message)
+
+                # 🔹 अब Welcome Message + Buttons भेजो  
                 button = [[
                     InlineKeyboardButton('💫Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
                     InlineKeyboardButton('😇Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
@@ -76,14 +105,13 @@ async def save_group(bot, message):
                     InlineKeyboardButton("🪐Backup", url="https://yourwebsite.com")
                 ]]
 
-                # Welcome Message को Store करना
                 temp.MELCOW['welcome'] = await message.reply_text(
-                    text=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
+                    text=script.MELCOW_ENG.format(u.mention, message.chat.title),
                     reply_markup=InlineKeyboardMarkup(button),
                     parse_mode=enums.ParseMode.HTML
                 )
 
-        # Auto Delete Check
+        # Auto Delete Check  
         if settings["auto_delete"]:
             await asyncio.sleep(600)
             if temp.MELCOW.get('welcome') is not None:
