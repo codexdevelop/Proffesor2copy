@@ -72,6 +72,8 @@ async def save_group(bot, message):
                     InlineKeyboardButton("💢YouTube", url="https://youtube.com/your_youtube")
                 ], [
                     InlineKeyboardButton("👀Website", url="https://yourwebsite.com")
+                ], [
+                    InlineKeyboardButton("🪐Backup", url="https://yourwebsite.com")
                 ]]
 
                 # Welcome Message को Store करना
