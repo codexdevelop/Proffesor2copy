@@ -60,19 +60,33 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                button = [[
-                    InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                ], [
-                    InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
-                ], [
-                    InlineKeyboardButton("Instagram", url="https://instagram.com/your_instagram"),
-                    InlineKeyboardButton("YouTube", url="https://youtube.com/your_youtube"),
-                    InlineKeyboardButton("Website", url="https://yourwebsite.com")
-                ]]
-        if settings["auto_delete"]:
-            await asyncio.sleep(600)
-            await (temp.MELCOW['welcome']).delete()
+
+               button = [[
+                   InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                   InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+               ], [
+                   InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
+               ], [
+                   InlineKeyboardButton("Instagram", url="https://instagram.com/your_instagram"),
+                   InlineKeyboardButton("YouTube", url="https://youtube.com/your_youtube"),
+                   InlineKeyboardButton("Website", url="https://yourwebsite.com")
+               ]]
+
+               # Welcome Message को Store करना
+               temp.MELCOW['welcome'] = await message.reply_text(
+                   text=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
+                   reply_markup=InlineKeyboardMarkup(button),
+                   parse_mode=enums.ParseMode.HTML
+               )
+
+       # Auto Delete Check
+       if settings["auto_delete"]:
+           await asyncio.sleep(600)
+           if temp.MELCOW.get('welcome') is not None:
+               try:
+                   await temp.MELCOW['welcome'].delete()
+               except:
+                   pass
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
