@@ -147,6 +147,10 @@ async def next_page(bot, query):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     try:
         if settings['max_btn']:
             if 0 < offset <= 10:
@@ -385,7 +389,10 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
-
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     if offset != "":
         try:
             if settings['max_btn']:
@@ -553,7 +560,10 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
-
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     if offset != "":
         try:
             if settings['max_btn']:
@@ -723,7 +733,10 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
-
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     if offset != "":
         try:
             if settings['max_btn']:
@@ -922,6 +935,10 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     if lang != "homepage":
         req = query.from_user.id
         offset = 0
@@ -1062,7 +1079,11 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
-
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
+        
     if offset != "":
         try:
             if settings['max_btn']:
