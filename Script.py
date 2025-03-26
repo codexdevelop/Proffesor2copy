@@ -766,6 +766,12 @@ Example:- /set_caption 📕 File Name: {filename}
 /stream - ɢᴇᴛ sᴛʀᴇᴀᴍᴀʙʟᴇ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅᴀʙʟᴇ ʟɪɴᴋ ᴏғ ᴀɴʏ ғɪʟᴇ</b>"""
 
 
+    INSTAGRAM_TXT = """<b><blockquote>⍟───[ My Instagram ]───⍟</blockquote>
+
+🫧Join My Instagram for more updates 
+💫 Instagram link 👇
+
+
 # Don't Remove Credit @Codexownerr
 # Join Update Channel For Amazing Bot @codexbotmaker
 # Ask Doubt on telegram @codexdisscus
