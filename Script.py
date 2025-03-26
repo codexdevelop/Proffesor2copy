@@ -769,7 +769,7 @@ Example:- /set_caption 📕 File Name: {filename}
     INSTAGRAM_TXT = """<b><blockquote>⍟───[ My Instagram ]───⍟</blockquote>
 
 🫧Join My Instagram for more updates 
-💫 Instagram link 👇
+💫 Instagram link 👇></b>"""
 
 
 # Don't Remove Credit @Codexownerr
