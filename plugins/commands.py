@@ -595,12 +595,13 @@ async def start(client, message):
                     return
             await msg.edit_caption(caption=f_caption)
             btn = [
-                [InlineKeyboardButton("✅ ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ ✅", callback_data=f'del#{file_id}')],
+                [InlineKeyboardButton("😇 ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ 😇", callback_data=f'del#{file_id}')],
                 [
-                    InlineKeyboardButton("🔄 INSTAGRAM", callback_data="instagram"),
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ ᴀɢᴀɪɴ", callback_data="download_again")
+                    InlineKeyboardButton("👻 INSTAGRAM", url="https://instagram.com"),
+                    InlineKeyboardButton("🫧 website", url="https://instagram.com")
                 ],
-                [InlineKeyboardButton("📂 ᴍᴏʀᴇ ғɪʟᴇꜱ", callback_data="more_files")]
+                [InlineKeyboardButton("🍿 Youtube", url="https://instagram.com")]
+                [InlineKeyboardButton("👀 Back-up", url="https://example.com")]
             ]
 
             k = await msg.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.</i></b></blockquote>")
@@ -651,12 +652,13 @@ async def start(client, message):
         reply_markup=reply_markup
     )
     btn = [
-        [InlineKeyboardButton("✅ ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ ✅", callback_data=f'del#{file_id}')],
+        [InlineKeyboardButton("😇 ɢᴇᴛ ғɪʟᴇ ᴀɢᴀɪɴ 😇", callback_data=f'del#{file_id}')],
         [
-            InlineKeyboardButton("📂 Instagram", callback_data="instagram"),
-            InlineKeyboardButton("📂 ᴏᴘᴛɪᴏɴ 2", callback_data="option2")
+            InlineKeyboardButton("👻 INSTAGRAM", url="https://instagram.com"),
+            InlineKeyboardButton("🫧 website", url="https://instagram.com")
         ],
-        [InlineKeyboardButton("📂 ᴏᴘᴛɪᴏɴ 3", callback_data="option3")]
+        [InlineKeyboardButton("🍿 Youtube", url="https://instagram.com")]
+        [InlineKeyboardButton("👀 Back-up", url="https://example.com")]
     ]
 
     k = await msg.reply(text=f"<blockquote><b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ <b><u>10 mins</u> 🫥 <i></b>(ᴅᴜᴇ ᴛᴏ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs)</i>.\n\n<b><i>ᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ᴏʀ ᴀɴʏ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ.</i></b></blockquote>")
