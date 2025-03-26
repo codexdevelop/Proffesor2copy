@@ -1990,14 +1990,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='start'),
             InlineKeyboardButton('❌ Close', callback_data='close_data')
         ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))  # अगर कोई Instagram image दिखानी हो
-        )
+    
         reply_markup = InlineKeyboardMarkup(buttons)
+
         await query.message.edit_text(
-            text=script.INSTAGRAM_TXT,  # यहाँ script.py में जो text define किया है वो आएगा
+            text=script.INSTAGRAM_TXT,  # script.py में define text आएगा
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.MARKDOWN
         )
