@@ -766,10 +766,11 @@ Example:- /set_caption 📕 File Name: {filename}
 /stream - ɢᴇᴛ sᴛʀᴇᴀᴍᴀʙʟᴇ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅᴀʙʟᴇ ʟɪɴᴋ ᴏғ ᴀɴʏ ғɪʟᴇ</b>"""
 
 
-    INSTAGRAM_TXT = """<b><blockquote>⍟───[ My Instagram ]───⍟</blockquote>
+    INSTAGRAM_TXT = """<b>⍟───[ My Instagram ]───⍟</b>
 
-🫧Join My Instagram for more updates 
-💫 Instagram link 👇></b>"""
+🫧 Join My Instagram for more updates  
+💫 <b>Instagram link 👇</b>
+"""
 
 
 # Don't Remove Credit @Codexownerr
