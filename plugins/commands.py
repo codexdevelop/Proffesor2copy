@@ -638,7 +638,11 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             return
-
+    if STREAM_MODE == True:
+        button = [[InlineKeyboardButton('sᴛʀᴇᴀᴍ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ', callback_data=f'generate_stream_link:{file_id}')]]
+        reply_markup=InlineKeyboardMarkup(button)
+    else:
+        reply_markup = None
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
