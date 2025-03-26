@@ -133,6 +133,10 @@ async def next_page(bot, query):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     else:
         btn = []
         btn.insert(0, 
@@ -375,6 +379,10 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     else:
         btn = []
         btn.insert(0, 
@@ -545,6 +553,10 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
         ])
     else:
         btn = []
@@ -718,6 +730,10 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
         ])
     else:
         btn = []
@@ -921,6 +937,10 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ]) 
     else:
         btn = []
         btn.insert(0, 
@@ -1064,6 +1084,10 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
         ])
     else:
         btn = []
