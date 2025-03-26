@@ -1987,7 +1987,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('📷 Open Instagram', url="https://instagram.com")
         ],[
-            InlineKeyboardButton('🔙 Back', callback_data='del#previous'),
+            InlineKeyboardButton('🔙 Back', callback_data='files'),
             InlineKeyboardButton('❌ Close', callback_data='close_data')
         ]]
     
