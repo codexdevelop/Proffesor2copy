@@ -1983,21 +1983,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "instagram":
-        buttons = [[
-            InlineKeyboardButton('📷 Open Instagram', url="https://instagram.com")
-        ],[
-            InlineKeyboardButton('🔙 Back', callback_data='files'),
-            InlineKeyboardButton('❌ Close', callback_data='close_data')
-        ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
-
-        await query.message.edit_text(
-            text=script.INSTAGRAM_TXT,  # script.py में define text आएगा
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.MARKDOWN
-        )
     elif query.data == "subscription":
         buttons = [[
             InlineKeyboardButton('⇚Back', callback_data='start')
