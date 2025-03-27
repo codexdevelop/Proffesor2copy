@@ -1893,6 +1893,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('ᴘʀᴇᴍɪᴜᴍ ᴀɴᴅ ʀᴇғᴇʀʀᴀʟ', callback_data='subscription')
             ],[
                 InlineKeyboardButton('Movies ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK)
+            ], [
+                InlineKeyboardButton('💫Youtube', url='https://t.me/codexmoviehere'),
+                InlineKeyboardButton('😇Website', url='https://t.me/codexmoviehere')
+            ], [
+                InlineKeyboardButton('🍁Instagram', url='https://t.me/codexmoviehere'),
+                InlineKeyboardButton('🫧BackUp', url='https://t.me/codexmoviehere')
             ]]
         else:
             buttons = [[
@@ -1905,6 +1911,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('Movies ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK)
+            ], [
+                InlineKeyboardButton('💫Youtube', url='https://t.me/codexmoviehere'),
+                InlineKeyboardButton('😇Website', url='https://t.me/codexmoviehere')
+            ], [
+                InlineKeyboardButton('🍁Instagram', url='https://t.me/codexmoviehere'),
+                InlineKeyboardButton('🫧BackUp', url='https://t.me/codexmoviehere')    
             ]]
         if CLONE_MODE == True:
             buttons.append([InlineKeyboardButton('ᴄʀᴇᴀᴛᴇ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
