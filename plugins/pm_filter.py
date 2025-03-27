@@ -2673,6 +2673,10 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
         ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
+        ])
     else:
         btn = []
         btn.insert(0, 
@@ -2686,6 +2690,10 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
             InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
             InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton("🔞 Adult Channel 1", url="https://instagram.com"),
+            InlineKeyboardButton("🔞 Adult Channel 2", url="https://instagram.com")
         ])
     if offset != "":
         try:
